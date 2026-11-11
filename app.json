@@ -19,6 +19,22 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Se usa para fotografiar el problema",
+          "photosPermission": "Se usa para adjuntar una foto"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Se usa para registrar la ubicación del reporte"
+        }
+      ],
+      "expo-secure-store"
+    ]
   }
 }
