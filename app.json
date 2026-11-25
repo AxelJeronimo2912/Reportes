@@ -1,37 +1,39 @@
 {
   "expo": {
-    "name": "reportes",
+    "name": "Reportes de mantenimiento",
     "slug": "reportes",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "mx.edu.universidad.reportes",
+      "buildNumber": "1",
+      "supportsTablet": false
     },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "mx.edu.universidad.reportes",
+      "versionCode": 1,
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "plugins": [
       [
         "expo-image-picker",
         {
-          "cameraPermission": "Se usa para fotografiar el problema",
-          "photosPermission": "Se usa para adjuntar una foto"
+          "cameraPermission": "La app usa la cámara para fotografiar el problema de mantenimiento que vas a reportar.",
+          "photosPermission": "La app te permite elegir una fotografía existente como evidencia del reporte.",
+          "microphonePermission": false
         }
       ],
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Se usa para registrar la ubicación del reporte"
+          "locationWhenInUsePermission": "La app usa tu ubicación para registrar dónde se encuentra el problema reportado.",
+          "isAndroidBackgroundLocationEnabled": false,
+          "isIosBackgroundLocationEnabled": false
         }
       ],
       "expo-secure-store"
